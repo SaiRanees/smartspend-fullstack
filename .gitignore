@@ -1,0 +1,15 @@
+# Frontend dependencies — never push these
+frontend/node_modules/
+frontend/build/
+frontend/.cache/
+
+# Backend build output
+backend/target/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
