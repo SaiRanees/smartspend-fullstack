@@ -1,4 +1,5 @@
 # 💸 SmartSpend — Full-Stack Finance App
+![CI/CD](https://github.com/SaiRanees/smartspend-fullstack/actions/workflows/ci.yml/badge.svg)
 
 > React 18 Frontend + Spring Boot 3.2 Backend + MySQL
 
