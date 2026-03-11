@@ -1,98 +1,88 @@
-# 💸 SmartSpend — Full-Stack Finance App
-![CI/CD](https://github.com/SaiRanees/smartspend-fullstack/actions/workflows/ci.yml/badge.svg)
+💸 SmartSpend — Full Stack Finance Dashboard
+Show Image
+A production-ready full-stack personal finance application built with React 18 and Spring Boot 3.2. Track income and expenses, visualize spending patterns, manage budgets, and get AI-powered financial insights.
 
-> React 18 Frontend + Spring Boot 3.2 Backend + MySQL
+🖥️ Live Preview
+DashboardTransactionsBudgetAI InsightsSummary cards, trend chart, spending donutAdd, filter, delete transactionsSet limits, track spendingPersonalized financial tips
 
----
-
-## 📦 Project Structure
-
-```
-smartspend-fullstack/
-├── backend/       ← Spring Boot REST API (Java 21)
-└── frontend/      ← React 18 Dashboard (JavaScript)
-```
-
----
-
-## 🗄️ Architecture
-
-```
+🏗️ Architecture
 React Frontend (port 3000)
-        ↕  HTTP REST API calls
+        ↕ REST API (HTTP/JSON)
 Spring Boot Backend (port 8080)
-        ↕  Spring Data JPA
+        ↕ Spring Data JPA
 MySQL Database (port 3306)
-```
 
----
+🛠️ Tech Stack
+Frontend
+TechPurposeReact 18UI frameworkReact Router v6Client-side routingContext API + useReducerGlobal state managementRechartsInteractive chartsJavaScript ES6+Language
+Backend
+TechPurposeJava 21LanguageSpring Boot 3.2Web frameworkSpring Data JPADatabase ORMMySQLDatabaseLombokBoilerplate reductionJUnit 5 + MockitoUnit testing
 
-## ⚙️ Setup — Step by Step
+📁 Project Structure
+smartspend-fullstack/
+├── frontend/                        # React application
+│   └── src/
+│       ├── core/                    # Router, store, theme
+│       ├── features/                # Feature modules
+│       │   ├── dashboard/           # Dashboard page
+│       │   ├── transactions/        # Transactions page
+│       │   ├── budget/              # Budget page
+│       │   └── insights/            # AI Insights page
+│       ├── layout/                  # Sidebar, Topbar, AppLayout
+│       └── shared/                  # Reusable components, utils
+│
+├── backend/                         # Spring Boot application
+│   └── src/main/java/com/finance/tracker/
+│       ├── controller/              # REST endpoints
+│       ├── service/                 # Business logic
+│       ├── repository/              # Database layer
+│       ├── model/                   # Entity classes
+│       ├── exception/               # Exception handling
+│       └── config/                  # CORS configuration
+│
+└── .github/workflows/ci.yml         # GitHub Actions CI/CD
 
-### Step 1: Create MySQL Database
-Open MySQL Workbench or terminal and run:
-```sql
-CREATE DATABASE finance_tracker;
-```
+🚀 Getting Started
+Prerequisites
 
-### Step 2: Configure Backend
-Open `backend/src/main/resources/application.properties`
-Change this line to your MySQL password:
-```
-spring.datasource.password=your_mysql_password_here
-```
+Java 21
+Node.js 18+
+MySQL 8+
+Maven
 
-### Step 3: Run the Backend
-Open the `backend/` folder in IntelliJ IDEA or VS Code.
-Run the main class:
-```
-backend/src/main/java/com/finance/tracker/TrackerApplication.java
-```
-Or from terminal inside the `backend/` folder:
-```bash
-./mvnw spring-boot:run
-```
-Backend starts at → **http://localhost:8080**
 
-### Step 4: Run the Frontend
-Open a new terminal inside the `frontend/` folder:
-```bash
+Step 1 — MySQL Setup
+sqlCREATE DATABASE finance_tracker;
+
+Step 2 — Backend Configuration
+Open backend/src/main/resources/application.properties and set your MySQL password:
+propertiesspring.datasource.password=your_mysql_password_here
+
+Step 3 — Run Backend
+powershellcd backend
+mvn spring-boot:run
+Wait for:
+Started TrackerApplication in X seconds
+Tomcat started on port 8080
+
+Step 4 — Run Frontend
+powershellcd frontend
 npm install
 npm start
-```
-Frontend starts at → **http://localhost:3000**
+Opens at http://localhost:3000
 
----
+🔌 API Endpoints
+MethodEndpointDescriptionGET/api/transactionsGet all transactionsPOST/api/transactionsAdd new transactionDELETE/api/transactions/{id}Delete transactionGET/api/transactions/summaryGet income/expense/balanceGET/api/transactions/summary/categoryGet spending by categoryGET/api/transactions/category/{name}Filter by category
 
-## 🔗 API Endpoints (Spring Boot)
+✅ CI/CD Pipeline
+GitHub Actions automatically runs on every push to main:
 
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET    | /api/transactions | Get all transactions |
-| POST   | /api/transactions | Add new transaction |
-| DELETE | /api/transactions/{id} | Delete transaction |
-| GET    | /api/transactions/summary | Total income, expense, balance |
-| GET    | /api/transactions/summary/category | Spending by category |
-| GET    | /api/transactions/category/{name} | Filter by category |
+Backend job — runs JUnit 5 unit tests + builds JAR
+Frontend job — installs dependencies + builds React production bundle
 
----
 
-## 🧪 Sample POST Request Body
-```json
-{
-  "title": "Salary",
-  "amount": 85000,
-  "category": "Salary",
-  "type": "INCOME",
-  "date": "2025-03-01"
-}
-```
+👤 Author
+A. Sai Mohan Ranees
 
----
-
-## 🎤 Interview Talking Point
-
-> "I built both ends of the stack. The Spring Boot backend exposes REST APIs
-> with a Controller-Service-Repository architecture, input validation, and
-> centralized exception handling. The React frontend consumes those APIs through
-> a dedicated service layer — so swapping the backend URL is just one config change."
+GitHub: @SaiRanees
+LinkedIn: adiraju-sai-mohan
