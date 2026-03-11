@@ -1,0 +1,14 @@
+.budget-card__top     { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem; }
+.budget-card__icon    { width: 42px; height: 42px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 1.1rem; flex-shrink: 0; }
+.budget-card__meta    { flex: 1; display: flex; flex-direction: column; gap: 0.1rem; }
+.budget-card__name    { font-size: 0.88rem; font-weight: 600; }
+.budget-card__nums    { font-size: 0.82rem; color: var(--color-text-muted); }
+.budget-card__nums strong { font-family: var(--font-display); }
+.budget-card__limit   { color: var(--color-text-muted); }
+
+.budget-card__bar-track { height: 7px; background: var(--color-surface-2); border-radius: 20px; overflow: hidden; margin-bottom: 0.65rem; }
+.budget-card__bar-fill  { height: 100%; border-radius: 20px; transition: width 0.7s cubic-bezier(.4,0,.2,1); }
+
+.budget-card__footer  { display: flex; justify-content: space-between; align-items: center; }
+.budget-card__status  { font-size: 0.77rem; font-weight: 600; }
+.budget-card__pct     { font-family: var(--font-display); font-size: 0.8rem; color: var(--color-text-soft); }

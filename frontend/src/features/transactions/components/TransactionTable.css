@@ -1,0 +1,20 @@
+.txn-table { width: 100%; border-collapse: collapse; }
+.txn-table th {
+  text-align: left; padding: 0.85rem 1.2rem;
+  font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.07em;
+  color: var(--color-text-muted); font-weight: 600;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-surface-2);
+}
+.txn-table td { padding: 0.8rem 1.2rem; border-bottom: 1px solid var(--color-border); font-size: 0.87rem; vertical-align: middle; }
+.txn-table tr:last-child td { border-bottom: none; }
+.txn-table tbody tr:hover { background: var(--color-surface-2); }
+.txn-table__desc-cell { display: flex; align-items: center; gap: 0.6rem; }
+.txn-table__icon  { width: 32px; height: 32px; border-radius: var(--radius-xs); display: flex; align-items: center; justify-content: center; font-size: 0.9rem; flex-shrink: 0; }
+.txn-table__desc  { font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 200px; }
+.txn-table__badge { padding: 0.18rem 0.55rem; border-radius: 20px; font-size: 0.74rem; font-weight: 600; }
+.txn-table__date  { color: var(--color-text-soft); font-size: 0.82rem; }
+.txn-table__amount { font-family: var(--font-display); font-weight: 700; }
+.txn-table__amount--credit { color: var(--color-accent); }
+.txn-table__amount--debit  { color: var(--color-danger); }
+.txn-table__empty { text-align: center; padding: 3rem !important; color: var(--color-text-muted); }
